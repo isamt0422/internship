@@ -6,7 +6,7 @@ const path = require('path');
 const { title } = require('process');
 
 const app = express();
-const port = 3000;
+const port = process.env.port||3000;
 
 // Connect to MongoDB
 mongoose.connect("mongodb+srv://isatony2006:isa@cluster0.frqafcc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",{
