@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crafting Seamless Digital Experiences | Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e0eaff, #ffffff);
+      color: #1f1f1f;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 10%;
+      background: #f0f4f8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to right, rgba(0,123,255,0.2), rgba(255,255,255,0));
+      z-index: 0;
+    }
+
+    .hero-content {
+      flex: 1 1 45%;
+      max-width: 600px;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #1f3b73;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content h3 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 0.75rem 1.75rem;
+      background: #007bff;
+      color: white;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .tech-stack {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .tech-stack i {
+      font-size: 2rem;
+      color: #1f3b73;
+      background: #e9efff;
+      padding: 0.75rem;
+      border-radius: 12px;
+      transition: transform 0.2s ease, box-shadow 0.2s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .tech-stack i:hover {
+      transform: scale(1.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: #cce1ff;
+    }
+
+    .hero-image {
+      flex: 1 1 45%;
+      max-width: 500px;
+      margin-top: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 2rem;
+      }
+
+      .hero-content, .hero-image {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content h3 {
+        font-size: 1.3rem;
+      }
+
+      .tech-stack {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Crafting Seamless Digital Experiences</h1>
+      <h3>Full Stack Developer Specializing in Scalable Web Applications</h3>
+      <p>
+        I design and build full-stack web applications that are fast, functional, and user-focused.
+        My work combines stunning front-end interfaces with robust back-end systems to deliver seamless experiences.
+      </p>
+      <a href="#projects" class="cta-button">View My Projects</a>
+      <div class="tech-stack">
+        <i class="fab fa-html5" title="HTML5"></i>
+        <i class="fab fa-css3-alt" title="CSS3"></i>
+        <i class="fab fa-js" title="JavaScript"></i>
+        <i class="fab fa-react" title="React"></i>
+        <i class="fab fa-node" title="Node.js"></i>
+        <i class="fab fa-git-alt" title="Git"></i>
+        <i class="fab fa-linux" title="Linux"></i>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://cdn.pixabay.com/photo/2018/01/18/07/00/laptop-3087585_1280.jpg" alt="Developer at Work" loading="lazy">
+    </div>
+  </section>
+
+</body>
+</html>

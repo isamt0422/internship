@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stunning Portfolio Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 0;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      z-index: 999;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      transition: background 0.3s ease;
+    }
+    .navbar a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 10px 18px;
+      border-radius: 50px;
+      transition: background 0.3s ease, color 0.3s ease;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .navbar a:hover {
+      background: #ffd54f;
+      color: #222;
+      box-shadow: 0 0 12px #ffd54f;
+    }
+    .navbar a::before {
+      content: attr(data-icon);
+      font-size: 1.2rem;
+      margin-right: 5px;
+    }
+    .hero {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 140px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      max-width: 600px;
+      color: #eee;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+      margin-bottom: 50px;
+    }
+    .quote-container {
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      border-radius: 15px;
+      overflow: hidden;
+      background: #222;
+    }
+    .quote-container img {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+    }
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+      .navbar {
+        gap: 25px;
+        padding: 15px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="aboutme.html" data-icon="👤">about</a>
+    <a href="project.html" data-icon="📁">project</a>
+    <a href="works.html" data-icon="🛠️">works</a>
+    <a href="callme.html" data-icon="✉️">contact</a>
+    <a href="myresume.html" data-icon="📄">resume</a>
+  </nav>
+
+  <main class="hero">
+    <h1>Hello World!</h1>
+    <p><b>Here I welcome you everybody to my PORTFOLIO Website.</b></p>
+    <p>
+      I'm glad you're here. This space is all about sharing who I am, the projects I've worked on,
+      and the creative journey I've taken. Feel free to explore my work, learn more about me,
+      and don't hesitate to reach out through the contact section if you'd like to connect or collaborate.
+    </p>
+
+    <div class="quote-container" aria-label="Motivational quote about success">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Motivational quote background"/>
+      <figcaption style="padding: 15px; text-align:center; font-size: 1.3rem; font-style: italic; background:#000a; color: #ffd54f;">
+        “There are no secrets to success. It is the result of preparation, hard work, and learning from failure.”<br>— Colin Powell
+      </figcaption>
+    </div>
+  </main>
+</body>
+</html>

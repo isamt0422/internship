@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    #resume {
+      width: 800px;
+      background: white;
+      padding: 30px;
+      margin: auto;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #333;
+    }
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      background: #007bff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div id="resume">
+  <h1>Isa Tony</h1>
+  <p><strong>Email:</strong> isatony2006@gmail.com</p>
+  <p><strong>Phone:</strong> 7994*****1</p>
+
+  <h2>Education</h2>
+  <p>Bachelor of Science in Computer Science -University of VIMALA COLLEGE(Autonomous)</p>
+
+  <h2>Experience</h2>
+  <p>FULL STACK Developer  (2025–Present)</p>
+
+  <h2>Skills</h2>
+  <ul>
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li>Node.js </li>
+  </ul>
+</div>
+
+<button onclick="downloadResume()">Download Resume as PDF</button>
+
+<!-- html2canvas and jsPDF from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  async function downloadResume() {
+    const { jsPDF } = window.jspdf;
+    const resumeElement = document.getElementById('resume');
+
+    // Capture the resume div as canvas
+    const canvas = await html2canvas(resumeElement, { scale: 2 });
+    const imgData = canvas.toDataURL('image/png');
+
+    // Create PDF
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+
+    // Scale the image to fit A4
+    const imgProps = pdf.getImageProperties(imgData);
+    const imgRatio = imgProps.width / imgProps.height;
+    const pdfRatio = pdfWidth / pdfHeight;
+
+    let imgWidth, imgHeight;
+    if (imgRatio > pdfRatio) {
+      imgWidth = pdfWidth;
+      imgHeight = pdfWidth / imgRatio;
+    } else {
+      imgHeight = pdfHeight;
+      imgWidth = pdfHeight * imgRatio;
+    }
+
+    const x = (pdfWidth - imgWidth) / 2;
+    const y = 10;
+
+    pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);
+    pdf.save('My_Resume.pdf');
+  }
+</script>
+
+</body>
+</html>

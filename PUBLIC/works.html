@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Work - Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #eef2ff, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 600px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .hero-content h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .hero-content h3 {
+      font-size: 20px;
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .tech-item {
+      background-color: #e0e7ff;
+      color: #1e3a8a;
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .tech-item i {
+      font-size: 16px;
+    }
+
+    .hero-image img {
+      max-width: 480px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeInRight 1.2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column-reverse;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 32px;
+      }
+
+      .hero-content {
+        padding-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Passionate</h1>
+      <h3>Full Stack Developer</h3>
+      <p>
+        I design and build full-stack web applications that are fast, functional, and user-focused. 
+        My work combines stunning front-end interfaces with robust back-end systems to deliver seamless experiences.
+      </p>
+      <p>
+        I'm passionate about writing clean code, building scalable architectures, and staying current with modern web technologies.
+        Whether it’s crafting responsive UIs or developing secure APIs, I take pride in every part of the development process.
+      </p>
+
+      <div class="tech-stack">
+        <div class="tech-item"><i class="fab fa-html"></i> HTML</div>
+        <div class="tech-item"><i class="fab fa-css-alt"></i> CSS</div>
+        <div class="tech-item"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="tech-item"><i class="fas fa-server"></i> Express.js</div>
+        <div class="tech-item"><i class="fas fa-database"></i> MongoDB</div>
+        <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://cdn.pixabay.com/photo/2020/04/09/13/19/laptop-5025031_1280.jpg">
+    </div>
+  </section>
+
+</body>
+</html>
